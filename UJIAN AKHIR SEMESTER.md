@@ -667,16 +667,16 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
        notify:
         - restart bind
      
-     - name: copy kelompok7.fpas
+     - name: copy kelompok1.fpas
        template:
-         src=templates/kelompok7.fpas
+         src=templates/kelompok1.fpas
          dest=/var/www/html/news/wp
        notify:
         - restart bind
      
-     - name: copy 43.168.192
+     - name: copy 100.168.192
        template:
-         src=templates/43.168.192.in-addr.arpa
+         src=templates/100.168.192.in-addr.arpa
          dest=/var/www/html/news/wp
        notify:
         - restart bind
@@ -824,9 +824,9 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
      }
      ```
 
-   - Creating 172.20.10.4.in-addr.arpa in roles/wp/templates and adding script configuration
+   - Creating  192.168.100.in-addr.arpa in roles/wp/templates and adding script configuration
 
-    - nano roles/wp/templates/172.20.10.4.in-addr.arpa
+    - nano roles/wp/templates/ 192.168.100.in-addr.arpa
 
      ```markdown
      ;
@@ -840,8 +840,8 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
                              2419200         ; Expire
                               604800 )       ; Negative Cache TTL
      ;
-     172.20.10.4.in-addr.arpa. IN NS kelompok7.fpas.
-     4 IN PTR kelompok1.fpas.
+     192.168.100.in-addr.arpa. IN NS kelompok7.fpas.
+     168 IN PTR kelompok1.fpas.
      ```
 
    -   Creating kelompok1.fpas in roles/wp/templates and adding script configuration
@@ -861,7 +861,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
                               604800 )       ; Negative Cache TTL
      ;
      @       IN      NS      kelompok7.fpas.
-     @       IN      A     172.20.10.4. 
+     @       IN      A     192.168.100. 
      news       IN      CNAME      kelompok1.fpas.
      ```
 
@@ -883,8 +883,8 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
                 file "/etc/bind/vm/kelompok1.fpas";
      };
      
-     zone "43.168.192.in-addr.arpa"{
-                type master;172.20.10.4.
+     zone "100.168.192.in-addr.arpa"{
+                type master; 192.168.100.
                 file "/etc/bind/vm/4.10.20.172.in-addr.arpa";
      };
      ```
@@ -925,7 +925,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
      - nano roles/wp/templates/resolv.conf
 
      ```
-     nameserver 72.20.10.4.
+     nameserver  192.168.100.168
      ```
 
    - Running command
