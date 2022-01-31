@@ -16,7 +16,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
      mkdir -p ~/ansible/tubes
      ```
 
-     ​		
+     	
 
 2. Creating lxc_db_server, lxc_php5_1, lxc_php5_2, lxc_php7_1, lxc_php7_2, lxc_php7_3, lxc_php7_4, lxc_php7_5 and lxc_php7_6
 
@@ -62,15 +62,15 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Setting hosts and adding IP Address and Domain for each containers in VM ubuntu server
 
-     - nano /etc/hosts
+       -nano /etc/hosts
 
-       ![2](C:\Users\owner\Downloads\UAS SAS\2.jpg)
+       ![2](https://user-images.githubusercontent.com/93079538/151739252-d6dd4eb6-d66d-4b97-b598-7b69eae04020.jpg)
 
    - Setting IP Static for all off containers until this allow picture
 
-     - If have set each containers check the IP containers in VM ubuntu server with command : lxc-ls -f
+       -If have set each containers check the IP containers in VM ubuntu server with command : lxc-ls -f
 
-       ![1](C:\Users\owner\Downloads\UAS SAS\1.jpg)
+       ![1](https://user-images.githubusercontent.com/93079538/151739269-7c2b5431-e50b-48ad-9b9d-39f41075b8f1.jpg)
 
    -  Configuration lxc_db_server, lxc_php5_1, lxc_php5_2, lxc_php7_1, lxc_php7_2, lxc_php7_3, lxc_php7_4, lxc_php7_5 and lxc_php7_6 like this commands below
 
@@ -120,7 +120,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
 3. Creating install-mariadb.yml file and adding configuration
 
-   ![3](C:\Users\owner\Downloads\UAS SAS\3.jpg)
+   ![3](https://user-images.githubusercontent.com/93079538/151739560-57286677-e67e-44d0-93a1-ea0a115dd5a0.jpg)
    
    - Creating directory roles/db, and creating tasks, handlers, templates in db directory
    
@@ -210,7 +210,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
    
    - Creating my.cnf in roles/db/templates and adding script configuration
    
-     - nano roles/db/templates/my.cnf
+    - nano roles/db/templates/my.cnf
    
      ```markdown
      #
@@ -352,7 +352,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
    
    - Creating main.yml in roles/db/handlers and adding script configuration
    
-     - nano roles/db/handlers/main.yml
+    - nano roles/db/handlers/main.yml
    
      ```markdown
      ---
@@ -400,7 +400,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating main.yml in roles/app/handlers and adding script configuration
 
-     - nano roles/app/handlers/main.yml
+    - nano roles/app/handlers/main.yml
 
      ```
      ---
@@ -557,7 +557,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating main.yml in roles/wp/handlers and adding script configuration
 
-     - nano roles/wp/handlers
+    - nano roles/wp/handlers
 
      ```markdown
      ---
@@ -690,7 +690,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating wp.conf in roles/wp/templates and adding script configuration
 
-     - nano roles/wp/templates/wp.conf
+    - nano roles/wp/templates/wp.conf
 
      ```
      <?php
@@ -790,7 +790,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating wp.local in roles/wp/templates and adding script configuration
 
-     - nano roles/wp/templates/wp.local
+    - nano roles/wp/templates/wp.local
 
      ```
      server {
@@ -826,7 +826,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating 172.20.10.4.in-addr.arpa in roles/wp/templates and adding script configuration
 
-     - nano roles/wp/templates/172.20.10.4.in-addr.arpa
+    - nano roles/wp/templates/172.20.10.4.in-addr.arpa
 
      ```markdown
      ;
@@ -1544,7 +1544,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating main.yml in roles/yii/handlers and adding script configuration
 
-     - nano roles/yii/handlers/main.yml
+    - nano roles/yii/handlers/main.yml
 
      ```
      ---
@@ -1563,7 +1563,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating main.yml in roles/yii/tasks and adding script configuration
 
-     -  nano roles/yii/tasks/main.yml
+    - nano roles/yii/tasks/main.yml
 
      ```markdown
      ---
@@ -1635,7 +1635,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating env.template in roles/yii/templates and adding script configuration
 
-     - nano roles/yii/templates/env.template
+    - nano roles/yii/templates/env.template
 
      ```
      <?php
@@ -1651,7 +1651,7 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
    - Creating yii.conf in roles/yii/templates/yii.conf and adding script configuration
 
-     - nano roles/yii/templates/yii.conf/yii.conf
+    - nano roles/yii/templates/yii.conf/yii.conf
 
      ```markdown
      server {
@@ -1705,19 +1705,19 @@ NOVANDY PRAKOSO(1202190057)||DAFA SEPTIANDRI (1202192033)
 
 laravel (kelompok1.fpas/)
 
-![laravel](C:\Users\owner\Downloads\UAS SAS\laravel.JPG)
+![laravel](https://user-images.githubusercontent.com/93079538/151739632-7ed1e7b9-e02b-48a7-b557-7c5ea63c1257.JPG)
 
 (news.kelompok1.fpas/)
 
-![wordpress](C:\Users\owner\Downloads\UAS SAS\wordpress.jpg)
+![wordpress](https://user-images.githubusercontent.com/93079538/151739668-4899794e-b79e-4003-8d6c-6549c3b31b6b.jpg)
 
 Codelgniter (kelompok1.fpas/app)
 
-![CODELGNITER1](C:\Users\owner\Downloads\UAS SAS\CODELGNITER1.JPG)
+![CODELGNITER1](https://user-images.githubusercontent.com/93079538/151739701-77a29f5e-ea2d-46e2-89a7-14f6dd7ba022.JPG)
 
 YII (kelompok1.fpas/product)
 
-![product](C:\Users\owner\Downloads\UAS SAS\product.JPG)
+![yii](https://user-images.githubusercontent.com/93079538/151739723-ec84b733-ed82-4237-b711-9bea82cd998e.JPG)
 
 
 
@@ -1743,75 +1743,75 @@ Jawab:
 
 - 50 USER
 
-![50](C:\Users\owner\Downloads\UAS SAS\50.JPG)
+![50](https://user-images.githubusercontent.com/93079538/151740176-9740c596-24ec-47d5-9dcb-58275912c3f6.JPG)
 
 - 150
 
-![150](C:\Users\owner\Downloads\UAS SAS\150.JPG)
+![150](https://user-images.githubusercontent.com/93079538/151740185-b67ed1cd-6985-4a47-be4b-5aad1b1b170c.JPG)
 
 - 300
 
-![300](C:\Users\owner\Downloads\UAS SAS\300.JPG)
+![300](https://user-images.githubusercontent.com/93079538/151740217-136f4cea-9a40-4c4f-95a1-18cb6e3ae6b9.JPG)
 
 - 500 USER
 
-![500](C:\Users\owner\Downloads\UAS SAS\500.JPG)
+![500](https://user-images.githubusercontent.com/93079538/151740239-fb5a6c5c-e079-4e67-a6f4-7a50ed2a13d1.JPG)
 
 1. Rata Rata Throughput
 
-   - 50 user
+  - 50 user
 
-     - news.kelompok7.fpas : 207.5/s
-     - kelompok7.fpas/ : 212.8/s
-     - kelompok7.fpas/app : 208.3/s
-     - kelompok7.fpas/product : 210.1/s 
+    - news.kelompok7.fpas : 207.5/s
+    - kelompok7.fpas/ : 212.8/s
+    - kelompok7.fpas/app : 208.3/s
+    - kelompok7.fpas/product : 210.1/s 
 
-   -  150 user
+  -  150 user
 
      - news.kelompok7.fpas : 152/s
      - kelompok7.fpas/ : 176.3/s
      - kelompok7.fpas/app : 149/s
      - kelompok7.fpas/product : 165.3/s
 
-   -  300 user
+  -  300 user
 
      - news.kelompok7.fpas : 164/s
      - kelompok7.fpas/ : 171.3/s
      - kelompok7.fpas/app : 168/s
      - kelompok7.fpas/product : 170/s
 
-   - 500 user
+  - 500 user
 
-     - news.kelompok7.fpas : 160.6/s
-     - kelompok7.fpas/ : 160.7/s
-     - kelompok7.fpas/app : 160.6/s
-     - kelompok7.fpas/product : 170/s
+    - news.kelompok7.fpas : 160.6/s
+    - kelompok7.fpas/ : 160.7/s
+    - kelompok7.fpas/app : 160.6/s
+    - kelompok7.fpas/product : 170/s
 
      
 
 2. Rata - rata jumlah user yang dapat dilayani setiap detik
-   - 50 user
-     - news.kelompok7.fpas : 17
-     - kelompok7.fpas/ : 16
-     - kelompok7.fpas/app : 6
-     - kelompok7.fpas/product : 6
-   - 150 user
-     - news.kelompok7.fpas : 70
-     - kelompok7.fpas/ : 82
-     - kelompok7.fpas/app : 13
-     - kelompok7.fpas/product : 13
-   - 300 user
-     - news.kelompok7.fpas : 51
-     - kelompok7.fpas/ : 48
-     - kelompok7.fpas/app : 19
-     - kelompok7.fpas/product : 15 
-   - 500 user
-     - news.kelompok7.fpas : 28
-     - kelompok7.fpas/ : 134
-     - kelompok7.fpas/app : 7
-     - kelompok7.fpas/product : 6
+  - 50 user
+    - news.kelompok7.fpas : 17
+    - kelompok7.fpas/ : 16
+    - kelompok7.fpas/app : 6
+    - kelompok7.fpas/product : 6
+  - 150 user
+    - news.kelompok7.fpas : 70
+    - kelompok7.fpas/ : 82
+    - kelompok7.fpas/app : 13
+    - kelompok7.fpas/product : 13
+  - 300 user
+    - news.kelompok7.fpas : 51
+    - kelompok7.fpas/ : 48
+    - kelompok7.fpas/app : 19
+    - kelompok7.fpas/product : 15 
+  - 500 user
+    - news.kelompok7.fpas : 28
+    - kelompok7.fpas/ : 134
+    - kelompok7.fpas/app : 7
+    - kelompok7.fpas/product : 6
 3. Untuk meningkatkan jumlah user pada layanan web server dapat dilakukan dengan beberapa hal yaitu:
    - Menghapus layanan yang tidak terpakai 
    - Memberikan sistem oprasi yang terbaru
    - Mengoptimalkan resolusi pada gambar
-   - memberikan internet dan kaulitas internet yang  
+   - memberikan jaringan internet yang cepat 
